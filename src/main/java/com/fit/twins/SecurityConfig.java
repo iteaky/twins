@@ -23,11 +23,6 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers(
-                // Vaadin Flow static resources // (1)
-                "/index/index/**",
-
-                // the standard favicon URI
-                "/favicon.ico");
+        web.ignoring().antMatchers("/index/index/**");
     }
 }
