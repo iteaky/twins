@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel='StyleSheet' type='text/css' href='/index/main.css' />
+
+
+</head>
+<body>
+<div id="welcome">
+<button type="button" class="welcome" @click="getWinner">get winner</button>
+    <ul>
+        <li v-for="winner in winners">{{ winner }}</li>
+    </ul>
+</div>
+
+<script>
+    var app = new Vue({
+      el: '#welcome',
+      data: {
+        winners: [],
+        url: 'http://localhost:8080/winner?link=https://www.instagram.com/p/B9MSv1Wo58O/'
+
+      },
+      methods:{
+      getWinner(){
+      axios.get(this.url).then((response) => {
+      console.log(response.data);
+      this.winners.push(response.data);
+    });
+    }
+    }
+    })
+  </script>
+</body>
+</html>
