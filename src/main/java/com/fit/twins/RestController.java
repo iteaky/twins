@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Map;
 
 @AllArgsConstructor
 @org.springframework.web.bind.annotation.RestController
@@ -18,8 +19,7 @@ public class RestController {
     public String getWinner(@RequestParam String link) throws IOException {
 
         Object details = SecurityContextHolder.getContext().getAuthentication().getDetails();
-        Pair<String, String> message = messageBean.getMessage(details, link, new ArrayList<>());
-        return message.getKey() + " когда отметила " + message.getValue();
+        return messageBean.getMessage(details, link, new ArrayList<>());
     }
 
 }

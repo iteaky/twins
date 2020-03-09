@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
 import com.fit.twins.demo.*;
-import javafx.util.Pair;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -13,10 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -26,7 +22,7 @@ import java.util.stream.Collectors;
 public class MessageBean implements Serializable {
 
 
-    public Pair<String, String> getMessage(Object token, Object postLink, List<String> winners) throws IOException {
+    public String getMessage(Object token, Object postLink, List<String> winners) throws IOException {
         OAuth2AuthenticationDetails token2 = (OAuth2AuthenticationDetails) token;
         ICoreAuthenticationProvider authenticationProvider = request -> request;
 
@@ -50,9 +46,7 @@ public class MessageBean implements Serializable {
         int index = rand.nextInt(size);
         IgComments.IgComment2 igComment2 = uniqUsers.get(index);
 
-        return new Pair<String, String>(igComment2.getUsername(), igComment2.getText());
-
-
+        return igComment2.getUsername() +  " когда отметила " + igComment2.getText();
     }
 
     private List<IgComments.IgComment2> getallPostComments(OAuth2AuthenticationDetails token2, OkHttpClient client, Gson gson, Post post) throws IOException {
