@@ -28,10 +28,9 @@
       },
       methods:{
       getWinner(){
-            let link = this.link;
             console.log(this.message);
             console.log(this.rootLink);
-      axios.get(this.rootLink+ "/winner", null, {params: {link}}).then((response) => {
+      axios.get(this.rootLink+ "/winner?link=" + this.link).then((response) => {
       this.winners.push(response.data);
     });
     }
