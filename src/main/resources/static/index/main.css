@@ -7,15 +7,15 @@
   font-size: 90px;
   cursor: pointer;
   text-align: center;
-  color:white;
+  color: white;
 }
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  font-size:90px
-  height:300px
+  font-size: 90px
+  height: 300px
 }
 .image {
   display: block;
