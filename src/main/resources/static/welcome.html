@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id="welcome">
-    <input v-model="message" placeholder="place link to post">
+    <input v-model="link" placeholder="place link to post">
     <button type="button" class="welcome" @click="getWinner">get winner</button>
     <ul>
         <li v-for="winner in winners">{{ winner }}</li>
@@ -21,16 +21,16 @@
     var app = new Vue({
       el: '#welcome',
       data: {
-        message:'',
+        link:'',
         winners: [],
-        rootLink: window.location.href
+        rootLink: window.location.origin
 
       },
       methods:{
       getWinner(){
             console.log(this.message);
             console.log(this.rootLink);
-      axios.get(this.rootLink + this.message).then((response) => {
+      axios.get(this.rootLink+ "/winner", null, {params: {this.link}}).then((response) => {
       this.winners.push(response.data);
     });
     }
