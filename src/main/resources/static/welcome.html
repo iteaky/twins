@@ -11,7 +11,7 @@
 <body>
 <div id="welcome">
     <input v-model="message" placeholder="отредактируй меня">
-    <button type="button" class="welcome" @click="getWinner(message)">get winner</button>
+    <button type="button" class="welcome" @click="getWinner()">get winner</button>
     <ul>
         <li v-for="winner in winners">{{ winner }}</li>
     </ul>
@@ -27,9 +27,10 @@
 
       },
       methods:{
-      getWinner(url){
-      axios.get(this.rootLink + this.url).then((response) => {
-      console.log(response.data);
+      getWinner(){
+            console.log(this.message);
+            console.log(this.rootLink);
+      axios.get(this.rootLink + this.message).then((response) => {
       this.winners.push(response.data);
     });
     }
