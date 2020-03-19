@@ -10,8 +10,8 @@
 </head>
 <body>
 <div id="welcome">
-    <input v-model="link" placeholder="place link to post">
-    <button type="button" class="welcome" @click="getWinner">get winner</button>
+    <input class="center" v-model="link" placeholder="place link to post">
+    <button class="center" class="welcome" type="button" class="welcome" @click="getWinner">get winner</button>
     <ul>
         <li v-for="winner in winners">{{ winner }}</li>
     </ul>
