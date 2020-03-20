@@ -2,9 +2,9 @@
 <html>
 <head>
     <title>My first Vue app</title>
-    <script type='text/javascript' src='/index/axios.min.js'></script>
-    <script type='text/javascript' src='/index/vue.min.js'></script>
-    <link rel='StyleSheet' type='text/css' href='/index/main.css'/>
+    <script type='text/javascript' src='index/axios.min.js'></script>
+    <script type='text/javascript' src='index/vue.min.js'></script>
+    <link rel='StyleSheet' type='text/css' href='index/main.css'/>
 
 
 </head>
@@ -12,7 +12,7 @@
 <div  id="welcome">
     <img class="image" src="index/main.jpg">
     <input class="center placeholder" v-model="link" placeholder="place link to post">
-    <v-btn  class="pink white--text" :disabled="disabled" type="button" @click="getWinner">get winner</v-btn>
+    <button  class="center welcome" :disabled="disabled" type="button" @click="getWinner">get winner</button>
     <ul>
         <li class="center line" v-for="winner in winners">{{ winner }}</li>
     </ul>
@@ -35,8 +35,9 @@
             console.log(this.rootLink);
       axios.get(this.rootLink+ "/winner?link=" + this.link).then((response) => {
       this.winners.push(response.data);
-      this.disabled = false;
     });
+          this.disabled = false;
+
     }
     }
     })
