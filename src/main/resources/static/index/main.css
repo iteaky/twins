@@ -1,6 +1,6 @@
 .welcome {
   display: block;
-  width: 100%;
+  width: 90%;
   border: none;
   background-color: black;
   padding: 14px 28px;
@@ -13,7 +13,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 90%;
   font-size: 90px;
   height: 300px;
   border-radius: 35px;
@@ -26,12 +26,14 @@
   width: 100%;
 }
 .placeholder{
+    width: 90%;
     font-size: 420%;
     text-align: center;
     margin-top: 20%;
     height: auto;
     background-color: lightpink;
     color: white;
+
     }
 
 .line {
@@ -43,4 +45,5 @@
     border-right: 0px;
     border-top: hidden;
     border-top-width: initial;
+    padding-left: 2%;
 }
