@@ -6,29 +6,13 @@
   display: block;
   background-color: #d6246c;
   border: none;
+  border-radius:25px;
   font-size: 90px;
   color: #FFFFFF;
-  padding: 20px;
   width: 90%;
   text-align: center;
-  transition-duration: 1s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
 }
 
-.button:after {
-  background: black;
-  opacity: 0;
-  transition: all 1.8s
-}
-
-.button:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
 
 .active{
   background-color: #ff8fbc;
