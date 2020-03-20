@@ -35,8 +35,12 @@
             console.log(this.rootLink);
       axios.get(this.rootLink+ "/winner?link=" + this.link).then((response) => {
       this.winners.push(response.data);
-    });
-          this.disabled = false;
+                this.disabled = false;
+
+    })
+    .catch(error => {
+    console.log(error));
+                    this.disabled = false;
 
     }
     }
