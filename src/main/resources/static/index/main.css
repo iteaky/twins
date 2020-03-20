@@ -58,8 +58,12 @@
     font-size: 420%;
     text-align: center;
     height: auto;
-    background-color: lightpink;
+    background-color: white;
     color: white;
+    border:solid;
+    border-color:d6246c;
+    border:3px;
+    border-radius:35px;
 
     }
 
