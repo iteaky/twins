@@ -30,6 +30,12 @@
   transition: 0s
 }
 
+.active{
+  background-color: #ff8fbc;
+  color:#f7c8db;
+
+}
+
 .welcome {
   display: block;
   width: 90%;
