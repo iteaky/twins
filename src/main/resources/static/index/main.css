@@ -18,9 +18,12 @@
   height: 300px;
   border-radius: 35px;
 }
+.top{
+  margin-top: 30%;
+}
+
 .image {
   display: block;
-  margin-top: 30%;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
