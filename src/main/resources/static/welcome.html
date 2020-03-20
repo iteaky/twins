@@ -12,7 +12,7 @@
 <div  id="welcome">
     <img class="image" src="index/main.jpg">
     <input class="center placeholder" v-model="link" placeholder="place link to post">
-    <button  class="center welcome" type="button" @click="getWinner">get winner</button>
+    <button  class="center welcome" :disabled="disable" type="button" @click="getWinner">get winner</button>
     <ul>
         <li class="center line" v-for="winner in winners">{{ winner }}</li>
     </ul>
@@ -24,15 +24,18 @@
       data: {
         link:'',
         winners: [],
-        rootLink: window.location.origin
+        rootLink: window.location.origin,
+        disabled:false
 
       },
       methods:{
       getWinner(){
+      this.disabled = true;
             console.log(this.message);
             console.log(this.rootLink);
       axios.get(this.rootLink+ "/winner?link=" + this.link).then((response) => {
       this.winners.push(response.data);
+      this.disabled = false;
     });
     }
     }
