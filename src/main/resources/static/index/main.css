@@ -8,9 +8,9 @@
     background-color: #d6246c;
     border: none;
     border-radius: 25px;
-    font-size: 90px;
+    font-size: 80px;
     color: #FFFFFF;
-    width: 90%;
+    width: 800px;
     text-align: center;
     cursor: pointer;
 
@@ -21,18 +21,6 @@
     background-color: #ff8fbc;
     color: #f7c8db;
 
-}
-
-.welcome {
-    display: block;
-    width: 90%;
-    border: none;
-    background-color: black;
-    padding: 14px 28px;
-    font-size: 90px;
-    cursor: pointer;
-    text-align: center;
-    color: white;
 }
 
 .center {
@@ -58,8 +46,8 @@
 }
 
 .placeholder {
-    width: 90%;
-    font-size: 420%;
+    width: 800px;
+    font-size: 60px;
     text-align: center;
     height: auto;
     background-color: white;
