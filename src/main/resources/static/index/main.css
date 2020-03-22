@@ -1,76 +1,80 @@
 
 .button {
-  padding:25px;
-  margin-top:25px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  background-color: #d6246c;
-  border: none;
-  border-radius:25px;
-  font-size: 90px;
-  color: #FFFFFF;
-  width: 90%;
-  text-align: center;
-  cursor: pointer;
+    padding: 25px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: #d6246c;
+    border: none;
+    border-radius: 25px;
+    font-size: 90px;
+    color: #FFFFFF;
+    width: 90%;
+    text-align: center;
+    cursor: pointer;
 
 }
 
 
-.active{
-  background-color: #ff8fbc;
-  color:#f7c8db;
+.active {
+    background-color: #ff8fbc;
+    color: #f7c8db;
 
 }
 
 .welcome {
-  display: block;
-  width: 90%;
-  border: none;
-  background-color: black;
-  padding: 14px 28px;
-  font-size: 90px;
-  cursor: pointer;
-  text-align: center;
-  color: white;
+    display: block;
+    width: 90%;
+    border: none;
+    background-color: black;
+    padding: 14px 28px;
+    font-size: 90px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
 }
+
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  font-size: 90px;
-  height: 300px;
-  border-radius: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    font-size: 90px;
+    height: 300px;
+    border-radius: 35px;
 }
-.top{
-  margin-top: 30px;
+
+.top {
+    margin-top: 30px;
 }
 
 .image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+    height: 400px;
+    width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-.placeholder{
+
+.placeholder {
     width: 90%;
     font-size: 420%;
     text-align: center;
     height: auto;
     background-color: white;
     color: black;
-    border:solid;
-    border-color:d6246c;
-    border-radius:35px;
+    border: solid;
+    border-color: #d6246c;
+    border-radius: 35px;
     padding: 10px;
 
-    }
+}
 
 .line {
     border: solid;
     text-align: left;
-    font-size: 300%;
+    font-size: 400%;
     height: auto;
     border-left: 0px;
     border-right: 0px;
