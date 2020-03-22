@@ -16,6 +16,23 @@
 
 }
 
+.small-button {
+    padding: 50px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: #d6246c;
+    border: none;
+    border-radius: 25px;
+    font-size: 60px;
+    color: #FFFFFF;
+    width: 400px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
 
 .active {
     background-color: #ff8fbc;
